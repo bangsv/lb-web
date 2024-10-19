@@ -1,0 +1,16 @@
+[
+    {
+        "videoSrc": "https://www.youtube.com/embed/MQOyv3v4jN0",
+        "title": "Video 1",
+        "channelName": "Мудреныч",
+        "channelIcon": "https://yt3.ggpht.com/DK-e6M8cOVEQOSC7lx6Ywj1gPLJH5zEUN1j0thTLMt3k-q4QPrUaw6BYAY7McHLo2hrX51s7jo4=s48-c-k-c0x00ffffff-no-rj",
+        "description": "Космическая программа Северной Родезии"
+    },
+    {
+        "videoSrc": "https://www.youtube.com/embed/MQOyv3v4jN0",
+        "title": "Video 2",
+        "channelName": "Мудреныч",
+        "channelIcon": "https://yt3.ggpht.com/DK-e6M8cOVEQOSC7lx6Ywj1gPLJH5zEUN1j0thTLMt3k-q4QPrUaw6BYAY7McHLo2hrX51s7jo4=s48-c-k-c0x00ffffff-no-rj",
+        "description": "Космическая программа Северной Родезии"
+    }
+]

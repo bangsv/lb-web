@@ -1,0 +1,44 @@
+version: '3.8' # Версия Docker Compose
+
+services:
+  flask-app:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - mynetwork
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/mydatabase
+
+  react-app:
+    build: ./my-app
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    networks:
+      - mynetwork
+
+  pgadmin:
+    # Сервис для pgAdmin
+    image: dpage/pgadmin4
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge

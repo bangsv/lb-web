@@ -1,0 +1,176 @@
+.content {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html,
+body {
+    overflow: hidden;
+    /* Запретить прокрутку */
+    height: 100%;
+    /* Убедитесь, что высота 100% для правильного отображения */
+    margin: 0;
+    /* Удаление отступов */
+}
+
+.content header {
+    background-color: rgba(248, 249, 250, 0.8);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    margin: 0;
+}
+
+.content nav {
+    width: 150px;
+    background: #f8f9fa;
+    padding: 10px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20%;
+}
+
+.content nav ul li {
+    margin: 25px 0;
+}
+
+.content nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    padding: 5px;
+    transition: background 0.3s;
+}
+
+.content nav ul li a:hover {
+    background: #e0e0e0;
+}
+
+.content main {
+    margin-left: 200px;
+    padding: 20px;
+    /* Убираем отступ сверху */
+    margin-top: 0;
+}
+
+.content .logo img {
+    height: 55px;
+}
+
+.content .search-form {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.content #search_content {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.content #search_content:focus {
+    border-color: #3ea6ff;
+    box-shadow: 0 0 8px rgba(62, 166, 255, 0.5);
+}
+
+.content .search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.content .search-form button:hover {
+    background-color: #2e96df;
+}
+
+.content .right_icons {
+    display: flex;
+    gap: 20px;
+}
+
+.content .right_icons img {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.content .right_icons img:hover {
+    opacity: 0.7;
+}
+
+/* Стили для прокручиваемого контейнера с видео */
+.content .video-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    height: 100%;
+}
+
+/* Стили для контейнера с видео */
+.content .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Для iframe, чтобы сохранить пропорции */
+.content iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* Стили для деталей видео */
+.content .video-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.content .channel-icon {
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.content .details-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.content .details-text p {
+    margin: 5px 0 0 0;
+    color: #666;
+}

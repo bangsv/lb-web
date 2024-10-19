@@ -1,0 +1,67 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Video API",
+        "description": "API для работы с видео"
+    },
+    "host": "localhost:5000",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/status": {
+            "get": {
+                "summary": "Проверка статуса базы данных",
+                "responses": {
+                    "200": {
+                        "description": "База данных подключена"
+                    },
+                    "500": {
+                        "description": "Ошибка подключения"
+                    }
+                }
+            }
+        },
+        "/videos": {
+            "get": {
+                "summary": "Получение всех видео",
+                "responses": {
+                    "200": {
+                        "description": "Список видео",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "video_src": {
+                                        "type": "string"
+                                    },
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "channel_name": {
+                                        "type": "string"
+                                    },
+                                    "channel_icon": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Ошибка при получении видео"
+                    }
+                }
+            }
+        }
+    }
+}
