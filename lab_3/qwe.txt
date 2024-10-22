@@ -13,6 +13,13 @@ CREATE TABLE videos (
     description TEXT NOT NULL
 );
 
+-- Создание таблицы пользователей
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL
+);
+
 -- Вставка данных в таблицу
 INSERT INTO videos (video_src, title, channel_name, channel_icon, description) VALUES
 ('https://www.youtube.com/embed/MQOyv3v4jN0', 'Video 1', 'Мудреныч', 'https://yt3.ggpht.com/DK-e6M8cOVEQOSC7lx6Ywj1gPLJH5zEUN1j0thTLMt3k-q4QPrUaw6BYAY7McHLo2hrX51s7jo4=s48-c-k-c0x00ffffff-no-rj', 'Космическая программа Северной Родезии'),
